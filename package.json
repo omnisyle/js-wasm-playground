@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "esbuild": "0.19.5"
+  },
+  "name": "wasi-rust",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --target=es2020 --outfile=dist/index.js",
+    "wasm": "./javy compile dist/index.js -o dist/index.wasm",
+    "run": "echo '{ \"n\": 2, \"bar\": \"baz\" }' | bin/wasmtime dist/index.wasm",
+    "test": "npm run build && npm run wasm && npm run run"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
