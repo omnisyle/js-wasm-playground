@@ -4,7 +4,8 @@
     "libiconv@latest",
     "curl@latest",
     "pkg-config@latest",
-    "nodejs@latest"
+    "nodejs@latest",
+    "ruby@latest"
   ],
   "env": {
     "PROJECT_DIR": "$PWD"
